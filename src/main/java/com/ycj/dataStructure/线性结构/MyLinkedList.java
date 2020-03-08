@@ -38,6 +38,7 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
             Node<E> insert=new Node<>(element, lastNode, null);
             if (lastNode==null) {  // 整个链表的第一个元素
                 firstNode = insert;
+                lastNode = insert;
             }else{
                 insert.pre.next=insert;
             }
@@ -47,8 +48,8 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
             Node<E> insert=new Node<>(element,node.pre,node);
             node.pre=insert;
             // index=0
-            if (node.pre==null) {
-                firstNode=node;
+            if (insert.pre==null) {
+                firstNode=insert;
             }else{
                 insert.pre.next=insert;
             }

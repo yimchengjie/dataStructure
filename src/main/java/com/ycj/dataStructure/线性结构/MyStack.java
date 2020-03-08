@@ -28,8 +28,13 @@ public class MyStack<E> {
         return list.isEmpty();
     }
 
+    public void clear(){
+        list.clear();
+    }
+
     @Override
     public String toString(){
         return list.toString();
     }
+
 }
